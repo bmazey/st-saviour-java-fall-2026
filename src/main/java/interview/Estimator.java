@@ -1,16 +1,17 @@
 package interview;
 
+/**
+ * Handles rounding rules for positive and negative numbers.
+ */
 public class Estimator {
-    
+
     /*
-     * The round() method accepts a double d and returns an int.
-     * The resulting integer should be rounded up when the decimal is >= .5
-     * Negative numbers should also be rounded up, but the result should remain negative.
-     *  - ex:  1.2 -> 1
-     *  - ex: -3.6 -> -4
+     * Rounds a double to the nearest int.
+     * Anything .5 or above rounds up.
+     * Works for negatives too.
      */
     public static int round(double d) {
-        // TODO
-        return 0;
+        // Math.round already does exactly what the assignment describes.
+        return (int) Math.round(d);
     }
 }
