@@ -3,7 +3,7 @@ package interview;
 /**
  * Estimator handles rounding logic for positive and negative numbers.
  */
-public class Estimator {
+public class EstimatorTest {
 
     /**
      * Custom rounding:
