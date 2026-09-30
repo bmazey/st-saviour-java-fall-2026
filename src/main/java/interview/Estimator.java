@@ -11,6 +11,33 @@ public class Estimator {
      */
     public static int round(double d) {
         // TODO
+
+        // Start by getting the decimal value from the original double.
+        double decimal = d - (int)d;
+
+        // Handle the case where we round up.
+        if (decimal >= 0.5) {
+            int rounded = (int)d + 1;
+            return rounded;
+        }
+
+        // Handle the case where we round down.
+        if (decimal < 0.5 && d >= 0) {
+            int rounded = (int)d;
+            return rounded;
+        }
+
+        // Handle negative number round up
+        if (decimal <= -0.5 && d < 0) {
+            int rounded = (int)d - 1;
+            return rounded;
+        }
+
+        // Handle the round down for negatives.
+        if (decimal > -0.5 && d < 0) {
+            return (int)d;
+        }
+
         return 0;
     }
 }

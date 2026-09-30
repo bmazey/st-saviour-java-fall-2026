@@ -11,6 +11,12 @@ public class SevenEleven {
      */
     public static String shop(int price) {
         // TODO
+        String result = "";
+
+        if (price % 7 == 0) {
+            // Do something ...
+        }
+
         return "";
     }
 }
