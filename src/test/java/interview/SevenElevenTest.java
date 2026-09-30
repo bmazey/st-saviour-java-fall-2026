@@ -6,9 +6,9 @@ public class SevenElevenTest {
 
     @Test
     public void testShop() {
-        // Should get a blank string when not a multiple of 7 or 11.
-        assert SevenEleven.shop(3) == "";
-        assert SevenEleven.shop(5) == "";
+        // Corrected to use .equals() for string comparison
+        assert SevenEleven.shop(3).equals("");
+        assert SevenEleven.shop(5).equals("");
 
         // Should get the string "seven" when a multiple of 7.
         assert SevenEleven.shop(7).equals("seven");
