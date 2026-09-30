@@ -4,12 +4,7 @@ import java.util.Random;
 
 public class Password {
 
-    private static final String LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    private static final String DIGITS = "0123456789";
-    private static final String SYMBOLS = "!@#$%^&*?-_+=<>";
-
-    private static final Random random = new Random();
-
+    
     /*
      * The generatePassword() method accepts no arguments and returns a String with the following characteristics:
      *  - The first 5 characters are letters.
@@ -19,20 +14,26 @@ public class Password {
      *  - It's relatively unlikely that two generated Strings are the same.
      */
     public static String generatePassword() {
+        Random random = new Random();
+
+        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String symbols = "!@#$%^&*?-_+=<>";
+
         StringBuilder sb = new StringBuilder(10);
 
-        // 1. First 5 characters are letters
+        // 1. First 5 are letters
         for (int i = 0; i < 5; i++) {
-            sb.append(LETTERS.charAt(random.nextInt(LETTERS.length())));
+            sb.append(letters.charAt(random.nextInt(letters.length())));
         }
 
-        // 2. Next 4 characters are digits
+        // 2. Next 4 are digits
         for (int i = 0; i < 4; i++) {
-            sb.append(DIGITS.charAt(random.nextInt(DIGITS.length())));
+            sb.append(digits.charAt(random.nextInt(digits.length())));
         }
 
-        // 3. Final character is a symbol
-        sb.append(SYMBOLS.charAt(random.nextInt(SYMBOLS.length())));
+        // 3. Last 1 is a symbol
+        sb.append(symbols.charAt(random.nextInt(symbols.length())));
 
         return sb.toString();
     }
