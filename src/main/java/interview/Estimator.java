@@ -10,7 +10,20 @@ public class Estimator {
      *  - ex: -3.6 -> -4
      */
     public static int round(double d) {
-        // TODO
-        return 0;
+        // weeeeeeeeee
+
+        double decimal = d - (int)d;
+
+        if (decimal >= 0.5) {
+            return (int)d + 1;
+            } 
+        if (decimal <= -0.5) {
+            return (int)d - 1;
+            } else {
+            return (int)d;
+             }
+
+
+
     }
 }
