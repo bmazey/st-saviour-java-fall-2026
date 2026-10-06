@@ -39,7 +39,37 @@ public class Password {
         r = random.nextInt(26);
         password += letters.charAt(r);
 
+        // Add the forth random letter to the password.
+        r = random.nextInt(26);
+        password += letters.charAt(r);
+
+        // Add the fifth random letter to the password. 
+        r = random.nextInt(26);
+        password += letters.charAt(r);
+
         String digits = "0123456789";
+        int t = random.nextInt(10);
+
+        // Add first digit to the password
+        password += digits.charAt(t);
+
+        // Add second digit to the password
+        t = random.nextInt(10);
+        password += digits.charAt(t);
+
+        // Add third digit to the password
+        t = random.nextInt(10);
+        password += digits.charAt(t);
+
+        // Add forth digit to the password
+        t = random.nextInt(10);
+        password += digits.charAt(t);
+//FIX LATTTER 
+        String symbol = "!@#$%^&*";
+        int s = random.nextInt(8);
+
+        // Add first symbol to the password
+        password += symbol.charAt(s);
 
         return password;
     }
