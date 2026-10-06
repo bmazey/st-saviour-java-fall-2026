@@ -42,20 +42,5 @@ public class OfficeSupplier {
     public static String stapleToEnd(String s, char c) {
         // TODO
         return "";
-
-// Example
-"unhappy".substring(2) returns "happy"
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

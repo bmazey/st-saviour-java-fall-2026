@@ -1,17 +1,33 @@
+import java.util.Random;
+
 class Hello {
     public static void main(String[] args) {
         // A comment!
-        int price = 77;
+        Random random = new Random();
 
-        if (price % 7 == 0 && price % 11 == 0) {
-            System.out.println("seveneleven") ;
-        } else if (price % 7 == 0) {
-            System.out.println("seven");
-        } else if (price % 11 == 0) {
-            System.out.println("eleven");
-        } else {
-            System.out.println("");
-        }
+        String password = "";
+
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+
+        int r = random.nextInt(26);
+
+        //Add first random letter to the password
+        password += letters.charAt(r);
+
+        // Add the second random letter to the password
+        r = random.nextInt(26);
+        password += letters.charAt(r);
+
+        // Add the third random letter to the password.
+        r = random.nextInt(26);
+        password += letters.charAt(r);
+
+        String digits = "0123456789";
+
+        System.out.println(password);
+
+        // Example
+        String unhappy = "unhappy".substring(2);
 
     }
 } 
