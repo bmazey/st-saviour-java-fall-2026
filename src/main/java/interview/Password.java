@@ -36,12 +36,4 @@ public class Password {
 
         return sb.toString();
     }
-
-    // Makes it runnable for testing
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            String p = generatePassword();
-            System.out.println(p + " (len=" + p.length() + ")");
-        }
-    }
 }
