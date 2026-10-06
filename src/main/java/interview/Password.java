@@ -4,24 +4,36 @@ import java.util.Random;
 
 public class Password {
 
+    private static final String LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    private static final String DIGITS = "0123456789";
+    private static final String SYMBOLS = "!@#$%^&*?-_+=<>";
+
+    private static final Random random = new Random();
+
     /*
      * The generatePassword() method accepts no arguments and returns a String with the following characteristics:
      *  - The first 5 characters are letters.
      *  - The next 4 characters are digits.
      *  - The final character is a symbol.
-     *  - The length of the String is 10. 
+     *  - The length of the String is 10.
      *  - It's relatively unlikely that two generated Strings are the same.
      */
     public static String generatePassword() {
-        // TODO
-        // HINT You will have to use a bounded random number generator for this method.
-        // https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#nextInt-int-
+        StringBuilder sb = new StringBuilder(10);
 
-        // HINT Using the charAt() method is a great technique for pulling chars from a String.
-        // https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#charAt-int-
+        // 1. First 5 characters are letters
+        for (int i = 0; i < 5; i++) {
+            sb.append(LETTERS.charAt(random.nextInt(LETTERS.length())));
+        }
 
-        Random random = new Random();
+        // 2. Next 4 characters are digits
+        for (int i = 0; i < 4; i++) {
+            sb.append(DIGITS.charAt(random.nextInt(DIGITS.length())));
+        }
 
-        return "";
+        // 3. Final character is a symbol
+        sb.append(SYMBOLS.charAt(random.nextInt(SYMBOLS.length())));
+
+        return sb.toString();
     }
 }

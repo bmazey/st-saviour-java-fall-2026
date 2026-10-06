@@ -8,9 +8,11 @@ public class OfficeSupplier {
      *   - ex: "xSt. Saviour" -> "St. Saviour"
      */
     public static String shredFirstCharacter(String s) {
-        // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        if (s == null || s.isEmpty()) {
+            return s == null ? null : "";
+        }
+        return s.substring(1);
     }
 
     /*
@@ -19,9 +21,11 @@ public class OfficeSupplier {
      *   - ex: "St. Saviourx" -> "St. Saviour"
      */
     public static String shredLastCharacter(String s) {
-        // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        if (s == null || s.isEmpty()) {
+            return s == null ? null : "";
+        }
+        return s.substring(0, s.length() - 1);
     }
 
     /*
@@ -30,17 +34,29 @@ public class OfficeSupplier {
      *   - ex: "ey can I pull you for a chat?", 'H' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToBeginning(String s, char c) {
-        // TODO
-        return "";
+        if (s == null) {
+            return String.valueOf(c);
+        }
+        return c + s;
     }
-
+    
     /*
      * The stapleToEnd() method takes a String s, a char c, and returns a new String.
      * The resulting String should have the character added to the end of the original
      *   - ex: "Hey can I pull you for a cha?", 't' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToEnd(String s, char c) {
-        // TODO
-        return "";
+        if (s == null) {
+            return String.valueOf(c);
+        }
+        return s + c;
+    }
+
+    // Makes it runnable for testing
+    public static void main(String[] args) {
+        System.out.println(shredFirstCharacter("xSt. Saviour")); // St. Saviour
+        System.out.println(shredLastCharacter("St. Saviourx")); // St. Saviour
+        System.out.println(stapleToBeginning("ey can I pull you for a chat?", 'H')); // Hey can I pull you for a chat?
+        System.out.println(stapleToEnd("Hey can I pull you for a cha?", 't')); // Hey can I pull you for a chat?
     }
 }

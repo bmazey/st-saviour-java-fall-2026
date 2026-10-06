@@ -1,6 +1,7 @@
 package interview;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /*
  * TODO - BONUS +5 points!
@@ -16,23 +17,38 @@ public class PasswordTest {
 
     @Test
     public void testPasswordComplexity() {
-        // TODO Check password characters, digits, & symbols at specified positions.
-        // HINT Java's Character class has rich support for classifying unicode symbols.
-        // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isLetter-char-
-        // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isDigit-char-
-        assert true;
+        // Generate a new password
+        String pwd = Password.generatePassword();
+        
+        // 1. Ensure that the first 5 characters are letters
+        for (int i = 0; i < 5; i++) {
+            assertTrue(Character.isLetter(pwd.charAt(i)), "Character at index " + i + " should be a letter");
+        }
+        
+        // 2. Ensure that the next 4 characters are digits
+        for (int i = 5; i < 9; i++) {
+            assertTrue(Character.isDigit(pwd.charAt(i)), "Character at index " + i + " should be a digit");
+        }
+        
+        // 3. Ensure that the final character is a symbol
+        // Since it's neither a letter nor a digit, we can verify it by checking that both are false
+        char finalChar = pwd.charAt(9);
+        assertFalse(Character.isLetter(finalChar), "Final character should not be a letter");
+        assertFalse(Character.isDigit(finalChar), "Final character should not be a digit");
     }
 
     @Test
     public void testPasswordLength() {
-        // TODO Ensure that generated password is of length 10.
-        assert true;
+        // Generate a password and ensure its length is exactly 10
+        String pwd = Password.generatePassword();
+        assertEquals(10, pwd.length(), "Password length should be exactly 10");
     }
 
     @Test
     public void testPasswordUnique() {
-        // TODO Create two passwords and ensure that they do not equal each other.
-        // NOTE We overlook collisions for the purpose of this exercise.
-        assert true;
+        // Create two passwords and ensure that they do not equal each other
+        String pwd1 = Password.generatePassword();
+        String pwd2 = Password.generatePassword();
+        assertNotEquals(pwd1, pwd2, "Two sequentially generated passwords should not be identical");
     }
 }
