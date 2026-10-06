@@ -20,8 +20,26 @@ public class Password {
         // HINT Using the charAt() method is a great technique for pulling chars from a String.
         // https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#charAt-int-
 
-        Random random = new Random();
+        Random random = new Random(); 
 
-        return "";
+        String password = ""; 
+
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+
+        int r = random.nextInt(26);  
+        //Add a random letter to form a password
+        password += letters.charAt(r);  
+
+         //Add the second random letter    
+        r = random.nextInt(26);  
+        password += letters.charAt(r);   
+
+        //Add the third random letter   
+        r = random.nextInt(26);  
+        password += letters.charAt(r);   
+
+        String digits = "0123456789";
+
+        return password;
     }
 }
