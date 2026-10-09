@@ -8,9 +8,10 @@ public class OfficeSupplier {
      *   - ex: "xSt. Saviour" -> "St. Saviour"
      */
     public static String shredFirstCharacter(String s) {
-        // TODO
+        // I'll do this later 
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+
+        return s.substring(1);
     }
 
     /*
@@ -21,7 +22,8 @@ public class OfficeSupplier {
     public static String shredLastCharacter(String s) {
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        
+        return s.substring(0, s.length() - 1);
     }
 
     /*
@@ -31,7 +33,7 @@ public class OfficeSupplier {
      */
     public static String stapleToBeginning(String s, char c) {
         // TODO
-        return "";
+        return c + s;
     }
 
     /*
@@ -41,6 +43,6 @@ public class OfficeSupplier {
      */
     public static String stapleToEnd(String s, char c) {
         // TODO
-        return "";
+        return s + c;
     }
 }
