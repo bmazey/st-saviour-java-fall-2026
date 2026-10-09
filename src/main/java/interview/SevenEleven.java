@@ -11,7 +11,7 @@ public class SevenEleven {
      */
     public static String shop(int price) {
         // A code that gives you different outputs using if statments based on the answer... insert smiling emoji :D
-
+        // Hope that makes sense, lol. 
 if (price % 7 == 0 && price % 11 == 0) {
             return "seveneleven";
         } else if (price % 7 == 0) {
