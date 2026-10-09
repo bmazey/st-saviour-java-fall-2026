@@ -10,7 +10,35 @@ public class Estimator {
      *  - ex: -3.6 -> -4
      */
     public static int round(double d) {
-        // TODO
-        return 0;
+        // Get the decimal value from the original above.  
+        // We have to round d up. 
+        // int rounded = (int)d +1;
+        // int rounded = (int)d;
+        // return rounded; 
+        double decimal = d - (int)d;
+
+        // round up for negatives 
+        // if (decimal < 0.5 && d < 0){
+        // return (int)d;
+        //}
+        if (decimal >= 0.5) {
+            return (int)d + 1;
+            } 
+            // if (decial < 0.5 && d >= 0)
+            // Round down 
+        if (decimal <= -0.5) {
+            return (int)d - 1;
+            } else {
+            return (int)d;
+             }
+             // Handle negative number round down 
+        // if (decimal > -0.5 && d < 0) bracket
+        // int rounded = (int)d -1;
+       // bracket
+        // return 0; 
+
+
+
+
     }
 }
