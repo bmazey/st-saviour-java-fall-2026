@@ -13,24 +13,13 @@ public class Estimator {
         // TODO
         double decimal = d - (int)d;
 
-        if (decimal >= 0.5) {
+        // Handle the round down case
+        if (decimal < 0.5 && decimal > -0.5){
+            return (int)d; 
+        } else if (decimal > 0) {
             return (int)d + 1;
         } else {
-            return (int)d; 
-        }
-        if (decimal < 0.5 && d >= 0){
-            int rounded = (int)d; 
-            return rounded;
-        // return 0;
-        if (decimal < 0.5 && d < 0){
-            return (int)d; 
+            return (int)d - 1;
         }
     }
-    if (decimal < 0.5 && d < 0) {
-        int rounded = (int)d - 1; 
-        return rounded; 
-        // for negative number 
-
-    
-
 }

@@ -22,6 +22,10 @@ public class Password {
 
         String letters = "abcdefghijklmnopqrstuvwxyz";
 
+        Random random = new Random();
+
+        String password = "";
+
         int r = random.nextInt(26); 
 
         //Add the first random letter 
