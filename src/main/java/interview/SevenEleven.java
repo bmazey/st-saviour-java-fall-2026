@@ -10,7 +10,7 @@ public class SevenEleven {
      *   - If the price is NOT a multiple of either 7 OR 11 the result String should be "".
      */
     public static String shop(int price) {
-        // TODO
+        // A code that gives you different outputs using if statments based on the answer... insert smiling emoji :D
 
 if (price % 7 == 0 && price % 11 == 0) {
             return "seveneleven";

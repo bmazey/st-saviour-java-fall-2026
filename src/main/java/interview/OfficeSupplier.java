@@ -8,7 +8,8 @@ public class OfficeSupplier {
      *   - ex: "xSt. Saviour" -> "St. Saviour"
      */
     public static String shredFirstCharacter(String s) {
-        // I'll do this later 
+        // This allows the specific character of this placement to return and the rest that follow
+
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
 
         return s.substring(1);
@@ -20,7 +21,8 @@ public class OfficeSupplier {
      *   - ex: "St. Saviourx" -> "St. Saviour"
      */
     public static String shredLastCharacter(String s) {
-        // TODO
+        // This removes the last character of the length 
+
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
         
         return s.substring(0, s.length() - 1);
@@ -32,7 +34,8 @@ public class OfficeSupplier {
      *   - ex: "ey can I pull you for a chat?", 'H' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToBeginning(String s, char c) {
-        // TODO
+        // This adds a character to the beginning 
+
         return c + s;
     }
 
@@ -42,7 +45,8 @@ public class OfficeSupplier {
      *   - ex: "Hey can I pull you for a cha?", 't' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToEnd(String s, char c) {
-        // TODO
+        // This adds a character to the end 
+        
         return s + c;
     }
 }
