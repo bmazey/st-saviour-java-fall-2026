@@ -19,6 +19,7 @@ public class Estimator {
         } 
 
         // Handle the case where we round down
+        
         if (decimal < 0.5) {
             return (int)d;
         }
