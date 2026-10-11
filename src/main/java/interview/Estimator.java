@@ -11,6 +11,15 @@ public class Estimator {
      */
     public static int round(double d) {
         // TODO
-        return 0;
+        double decimal = d - (int)d;
+
+        // Handle the round down case
+        if (decimal < 0.5 && decimal > -0.5){
+            return (int)d; 
+        } else if (decimal > 0) {
+            return (int)d + 1;
+        } else {
+            return (int)d - 1;
+        }
     }
 }

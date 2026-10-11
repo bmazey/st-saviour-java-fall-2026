@@ -9,8 +9,16 @@ public class SevenEleven {
      *   - If the price is a multiple of 7 AND 11 the result String should be "seveneleven"
      *   - If the price is NOT a multiple of either 7 OR 11 the result String should be "".
      */
-    public static String shop(int price) {
+    public static String shop(int number) {
         // TODO
-        return "";
-    }
+    
+        {
+   if (number % 77 == 0) {
+    return "SevenEleven";
+} else if (number % 7 == 0) {
+    return "Seven";
+} else if (number % 11 == 0) {
+    return "Eleven";
+} else return "";
 }
+    }}
