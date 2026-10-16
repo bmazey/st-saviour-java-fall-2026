@@ -14,9 +14,13 @@ public class SevenEleven {
         String result = "";
 
         if (price % 7 == 0) {
-            // Do something ...
+            result += "seven";
         }
 
-        return "";
+        if (price % 11 == 0) {
+            result += "eleven";
+        }
+
+        return result;
     }
 }
