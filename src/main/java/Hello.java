@@ -1,6 +1,8 @@
+import java.util.Random;
+
 class Hello {
     public static void main(String[] args) {
         // A comment!
-        System.out.println("new dawn, new day!");
+        System.out.println("Smash that like & subscribe!");
     }
 }
