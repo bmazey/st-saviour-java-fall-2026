@@ -21,15 +21,27 @@ public class SevenElevenTest {
         // Should get the string "seveneleven" when a multiple of 7 and 11.
         assert SevenEleven.shop(77).equals("seveneleven");
         assert SevenEleven.shop(154).equals("seveneleven");
-
-         int number = 7;
-if (number % 77 == 0) {
-    System.out.println("SevenEleven");
-} else {if (number % 7 == 0) {
-    System.out.println("Seven");
-} else {if (number % 11 == 0) {
-    System.out.println("Eleven");
-} else { System.out.println("None");
-}}}}}
     }
+    public static String shop(int price) {
+
+        if (price % 7 == 0 && price % 11 == 0) {
+            return "seveneleven";
+        }
+        if (price % 7 == 0){
+            return "seven";
+        }
+        if (price % 11 ==0) {
+            return "eleven";
+        }
+
+        return "";
+    }
+    
 }
+    
+    
+
+
+
+         
+
