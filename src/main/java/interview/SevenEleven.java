@@ -12,13 +12,12 @@ public class SevenEleven {
     public static String shop(int number) {
         // TODO
     
-        {
-   if (number % 77 == 0) {
-    return "SevenEleven";
-} else if (number % 7 == 0) {
-    return "Seven";
-} else if (number % 11 == 0) {
-    return "Eleven";
-} else return "";
+        if (number % 7 == 0 && number % 11 == 0) {
+            return "seveneleven";
+        } else if (number % 7 == 0) {
+            return "seven";
+        } else if (number % 11 == 0) {
+            return "eleven";
+        } else return "";
+    }
 }
-    }}
