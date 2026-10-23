@@ -10,7 +10,8 @@ public class OfficeSupplier {
     public static String shredFirstCharacter(String s) {
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        //S is at place 1, and this method includes place 1 and rest of characters
+        return s.substring(1);
     }
 
     /*
@@ -21,7 +22,8 @@ public class OfficeSupplier {
     public static String shredLastCharacter(String s) {
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        return s.substring(0, s.length() - 1); 
+        //Starts at 0 and counts length but is exclusive for the last character.
     }
 
     /*
@@ -31,7 +33,9 @@ public class OfficeSupplier {
      */
     public static String stapleToBeginning(String s, char c) {
         // TODO
-        return "";
+        return c + s; 
+
+        //This adds 'H' to beginning of string. 
     }
 
     /*
@@ -41,6 +45,8 @@ public class OfficeSupplier {
      */
     public static String stapleToEnd(String s, char c) {
         // TODO
-        return "";
+        return s + c; 
+
+        //This adds 't' to end of string. 
     }
 }

@@ -37,9 +37,41 @@ public class Password {
         //Add the third random letter   
         r = random.nextInt(26);  
         password += letters.charAt(r);   
+        
+        //Add the fourth random letter   
+        r = random.nextInt(26);  
+        password += letters.charAt(r); 
 
-        String digits = "0123456789";
+        //Add the fifth random letter   
+        r = random.nextInt(26);  
+        password += letters.charAt(r);
 
-        return password;
+        String digits = "0123456789";  
+ 
+        //Add a random digit to form a password 
+        int d = random.nextInt(10);
+        password += digits.charAt(d);   
+
+        //Add a second random digit to form a password 
+        d = random.nextInt(10);
+        password += digits.charAt(d);   
+
+        //Add a third random digit to form a password 
+        d = random.nextInt(10);
+        password += digits.charAt(d);  
+
+        //Add a fourth random digit to form a password 
+        d = random.nextInt(10);
+        password += digits.charAt(d);   
+
+        String symbols = "~!@$%^&*()";    
+ 
+        //Add a random character to form a password 
+        int c = random.nextInt(10);
+        password += symbols.charAt(c);  
+        //Five random letters, four random digits, and one random symbol are chosen and appended each time to form a password. 
+        return password;  
+
+
     }
 }
