@@ -25,4 +25,18 @@ public class EstimatorTest {
         assert Estimator.round(-3.2) == -3;
         assert Estimator.round(-3.5) == -4;
     }
+
+      public static int round(double d) {
+    double decimal = d - (int)d;
+
+        if (decimal < 0.5 && decimal > -0.5) {
+            return (int)d;
+        } else if (decimal > 0) {
+            return (int)d + 1;
+        } else {
+            return (int)d - 1;
+
+    }
+
+}
 }

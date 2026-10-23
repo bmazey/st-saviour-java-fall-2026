@@ -22,4 +22,26 @@ public class SevenElevenTest {
         assert SevenEleven.shop(77).equals("seveneleven");
         assert SevenEleven.shop(154).equals("seveneleven");
     }
+    public static String shop(int price) {
+
+        if (price % 7 == 0 && price % 11 == 0) {
+            return "seveneleven";
+        }
+        if (price % 7 == 0){
+            return "seven";
+        }
+        if (price % 11 ==0) {
+            return "eleven";
+        }
+
+        return "";
+    }
+    
 }
+    
+    
+
+
+
+         
+
