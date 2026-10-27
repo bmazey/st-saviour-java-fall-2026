@@ -11,7 +11,8 @@ public class OfficeSupplier {
         // This allows the specific character of this placement to return and the rest that follow
 
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-
+// String result = s.substring(1);
+// return result; 
         return s.substring(1);
     }
 
