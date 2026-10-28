@@ -8,18 +8,32 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
+        int sum = 0;
+        for(int i =0; i < numbers.length; i++) {
+            sum += numbers[i];
+        } 
 
-        return 0;
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
     // and returns the *position* of the negative number. You may safely assume
     // the provided array contains only a single negative number.
     //      ex: [11, 13, -1, 0, 9] -> 2
+
+    // wants the position of the negative number 
     public static int findNegative(int[] numbers) {
 
-        // TODO
+        // while loop
+        // i<0     
+        int i = 0;
+
+        while (i < numbers.length) {
+            if (numbers[i] < 0) { 
+                return i;
+            }
+            i++;
+        }
 
         return 0;
     }
@@ -29,9 +43,15 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
+        // It wants the greatest number in the array 
+        int greatest = numbers[0];
+        for(int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > greatest) {
+                greatest = numbers[i];
+            }
+        }
 
-        return 0;
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -49,9 +69,13 @@ public class Arrayer {
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-        // TODO
+        // Create new array, probably use int 
+        int round = numbers[0];
 
-        return new int[0];
+
+
+// Fix later maybe idk 
+        return round[i];
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
@@ -59,7 +83,7 @@ public class Arrayer {
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
 
-        // TODO
+        // use remove idk 
 
         return new int[0];
     }
@@ -68,10 +92,18 @@ public class Arrayer {
     // array containing only the last digit of each number in the original sequence.
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
+        // If you don't know the answer it is modulo 
+        // 7148 % 1000 = 148
+        // 7148 % 100 = 48
+        // 7148 % 10 = 8
+// new array to store the result, same size as the orignial. 
+        int [] result = new int[numbers.length];   
 
-        // TODO
-
-        return new int[0];
+        for(int i = 0; i < numbers. length; i++) {
+            int digit = numbers[i] % 10;
+            result[i] = digit;
+        }
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
