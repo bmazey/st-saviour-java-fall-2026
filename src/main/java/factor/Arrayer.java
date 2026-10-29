@@ -8,9 +8,12 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
+        int sum = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
 
-        return 0;
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -68,10 +71,14 @@ public class Arrayer {
     // array containing only the last digit of each number in the original sequence.
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
+        int[] result = new int[numbers.length];
 
-        // TODO
+        for(int i = 0; i < numbers.length; i++) {
+            int digit = numbers[i] % 10;
+            result[i] = digit;
+        }
 
-        return new int[0];
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
