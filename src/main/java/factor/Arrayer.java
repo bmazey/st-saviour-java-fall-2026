@@ -61,7 +61,24 @@ public class Arrayer {
 
         // TODO
 
-        return new int[0];
+           int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] == n) {
+                count++;
+            }
+        }
+
+        int[] result = new int[numbers.length - count];
+
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != n) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -70,21 +87,36 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         // Create new array, probably use int 
-        int round = numbers[0];
+        double round = doubles[0];
+        for(int i =1; i < doubles.length; i ++) {
+
+// ACTUALLY FIX LATER PLEASEEEEEEEE
+
+        }
 
 
 
 // Fix later maybe idk 
-        return round[i];
+        return new int[0];
+        // return result maybe  
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
+// If statement that uses modulo, can be divided by 2
+// Sum up the odds and idk 
+        // while loop
+        // i>0     
+        int i = 0;
 
-        // use remove idk 
-
+        while (i < numbers.length) {
+            if (numbers[i] > 0) { 
+                return i;
+            }
+            i+=2;
+        }
         return new int[0];
     }
 
