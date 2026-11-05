@@ -111,15 +111,16 @@ public class Arrayer {
 // If statement that uses modulo, can be divided by 2
 // Sum up the odds and idk 
         // while loop
-        // i>0     
-        int only = 0;
+        // i>0   
+        // Name it evens, doesn't work if you don't apparently.   
+        int evens = 0;
         for(int i = 0; i < numbers.length; i++) {
             if(numbers[i] % 2 == 0) {
-                only++;
+                evens++;
             }
         }
-
-        int[] result = new int[only];
+// Create an array 
+        int[] result = new int[evens];
 
         int position = 0;
         for(int i = 0; i < numbers.length; i++) {
