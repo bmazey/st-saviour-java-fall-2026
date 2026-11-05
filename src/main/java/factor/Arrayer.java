@@ -1,17 +1,19 @@
 package factor;
 
-import java.util.Arrays;
-
 public class Arrayer {
 
     // summation() accepts an array of integers and returns the sum of all numbers within.
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
+    int sum = 0; 
+    for(int i = 0; i < numbers.length; i ++) {  
+        sum += numbers[i];
 
-        return 0;
+        
     }
+    return sum;
+}
 
     // findNegative() accepts an array of integers containing one negative number
     // and returns the *position* of the negative number. You may safely assume
@@ -39,9 +41,26 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
+        // TODO   
 
-        return new int[0];
+           int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] == n) {
+                count++;
+            }
+        }
+
+        int[] result = new int[numbers.length - count];
+
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != n) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -59,9 +78,25 @@ public class Arrayer {
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
 
-        // TODO
+        
+        int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2 != 0) { 
+                count++;
+            }
+        }
 
-        return new int[0];
+        int[] result = new int[numbers.length - count];
+
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2 == 0) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
