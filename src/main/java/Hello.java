@@ -1,6 +1,10 @@
 class Hello {
     public static void main(String[] args) {
         // A comment!
-        System.out.println("new dawn, new day!");
+
+        int [] first = {0,0, 1, 1, 0};
+
+
+
+       } 
     }
-}
