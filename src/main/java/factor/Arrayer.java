@@ -87,37 +87,49 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         // Create new array, probably use int 
-        double round = doubles[0];
-        for(int i =1; i < doubles.length; i ++) {
+        int[] rounded = new int[doubles.length];
 
-// ACTUALLY FIX LATER PLEASEEEEEEEE
-
+        for(int i = 0; i < doubles.length; i++) {
+            // Compute the decimal off the original double.
+            double decimal = doubles[i] - (int)doubles[i];
+            if( decimal >= 0.5) {
+                rounded[i] = (int)doubles[i]+1;
+            
+            } else { 
+                rounded[i] = (int)doubles[i];
+            }
         }
 
-
-
-// Fix later maybe idk 
-        return new int[0];
-        // return result maybe  
+        return rounded;
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
+
 // If statement that uses modulo, can be divided by 2
 // Sum up the odds and idk 
         // while loop
         // i>0     
-        int i = 0;
-
-        while (i < numbers.length) {
-            if (numbers[i] > 0) { 
-                return i;
+        int only = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2 == 0) {
+                only++;
             }
-            i+=2;
         }
-        return new int[0];
+
+        int[] result = new int[only];
+
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2== 0) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
