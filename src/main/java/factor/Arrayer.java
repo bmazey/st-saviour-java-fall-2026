@@ -8,9 +8,11 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -19,9 +21,12 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                return i;
+            }
+        }
+        return -1; // Should never be reached if array contains exactly one negative number
     }
 
     // findGreatest() accepts an array of integers and returns the greatest
@@ -29,9 +34,16 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        if (numbers.length == 0) {
+            throw new IllegalArgumentException("Array must not be empty");
+        }
+        int greatest = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > greatest) {
+                greatest = numbers[i];
+            }
+        }
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -39,9 +51,21 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
+       int count = 0;
+        for (int number : numbers) {
+            if (number == n) {
+                count++;
+            }
+        }
 
-        return new int[0];
+        int[] result = new int[numbers.length - count];
+        int index = 0;
+        for (int number : numbers) {
+            if (number != n) {
+                result[index++] = number;
+            }
+        }
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -49,9 +73,12 @@ public class Arrayer {
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-        // TODO
-
-        return new int[0];
+        int[]  result = new int [doubles.length];
+        for (int i = 0; i < doubles.length; i++) {
+            result[i] = (int) Math.round(doubles[i]);
+        }
+        return result;
+    
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
@@ -60,8 +87,21 @@ public class Arrayer {
     public static int[] evensOnly(int[] numbers) {
 
         // TODO
+        int count = 0;
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                count++;
+            }
+        }
 
-        return new int[0];
+        int[] result = new int[count];
+        int index = 0;
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                result[index++] = number;
+            }
+        }
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
@@ -69,9 +109,12 @@ public class Arrayer {
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
 
-        // TODO
+        int[] result = new int[numbers.length]; 
 
-        return new int[0];
+        for (int i = 0; i < numbers.length; i++) {
+            result[i] = numbers[i] % 10;
+        }
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
